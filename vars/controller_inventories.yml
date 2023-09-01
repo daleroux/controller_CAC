@@ -1,0 +1,5 @@
+---
+controller_inventories:
+- name: linux_inventory
+  organization: Linux
+  description: "A few linux hosts for configuration as code demonstration"

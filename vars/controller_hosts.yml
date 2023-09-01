@@ -1,0 +1,10 @@
+---
+controller_hosts:
+- name: servera
+  inventory: linux_inventory
+  description: "rhel8 test system"
+  enabled: true
+- name: serverb
+  inventory: linux_inventory
+  description: "rhel8 test system"
+  enabled: true

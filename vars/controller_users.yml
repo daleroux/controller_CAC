@@ -1,0 +1,14 @@
+---
+controller_user_accounts:
+- username: alice
+  email: alice@example.com
+  organization: Linux
+- username: bob
+  email: bob@example.com
+  organization: Linux
+- username: eve
+  email: eve@example.com
+  organization: Linux  
+- username: mallory
+  email: mallory@example.com
+  organization: Linux  

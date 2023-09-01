@@ -1,0 +1,17 @@
+---
+controller_organizations:
+- name: Windows
+  description: Windows Team
+  max_hosts: 50
+- name: Linux
+  description: Linux Team
+  max_hosts: 100
+- name: Network
+  description: Network Team
+  max_hosts: 35
+- name: DevOps
+  description: DevOps Team
+  max_hosts: 60
+- name: DBA
+  description: DBA Team
+  max_hosts: 40

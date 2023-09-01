@@ -1,0 +1,34 @@
+---
+controller_roles:
+- user: alice
+  target_team: Linux_Admins
+  role: member
+- user: bob
+  target_team: Linux_Admins
+  role: member
+- user: eve
+  target_team: Linux_Operators
+  role: member
+- user: mallory
+  target_team: Linux_ReadOnly
+  role: member
+- team: Linux_Admins
+  organization: Linux
+  roles: 
+    - execute
+    - read
+    - project_admin
+    - inventory_admin
+    - credential_admin
+    - workflow_admin
+    - notification_admin
+    - job_template_admin
+    - auditor
+    - execution_environment_admin
+- team: Linux_Operators
+  organization: Linux
+  role: execute 
+- team: Linux_ReadOnly
+  organization: Linux
+  role: read 
+  

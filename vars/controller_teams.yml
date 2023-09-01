@@ -1,0 +1,47 @@
+---
+controller_teams:
+- name: Windows_Admins
+  description: Windows Admins Team
+  organization: Windows
+- name: Windows_Operators
+  description: Windows Operators Team
+  organization: Windows
+- name: Windows_ReadOnly
+  description: Windows ReadOnly Team
+  organization: Windows
+- name: Linux_Admins
+  description: Linux Admins Team
+  organization: Linux
+- name: Linux_Operators
+  description: Linux Operators Team
+  organization: Linux
+- name: Linux_ReadOnly
+  description: Linux ReadOnly Team
+  organization: Linux
+- name: Network_Admins
+  description: Network Admins Team
+  organization: Network
+- name: Network_Operators
+  description: Network Operators Team
+  organization: Network
+- name: Network_ReadOnly
+  description: Network ReadOnly Team
+  organization: Network
+- name: DevOps_Admins
+  description: DevOps Admins Team
+  organization: DevOps
+- name: DevOps_Operators
+  description: DevOps Operators Team
+  organization: DevOps
+- name: DevOps_ReadOnly
+  description: DevOps ReadOnly Team
+  organization: DevOps
+- name: DBA_Admins
+  description: DBA Admins Team
+  organization: DBA
+- name: DBA_Operators
+  description: DBA Operators Team
+  organization: DBA
+- name: DBA_ReadOnly
+  description: DBA ReadOnly Team
+  organization: DBA

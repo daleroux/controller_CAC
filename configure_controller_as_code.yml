@@ -1,0 +1,58 @@
+---
+- name: Configuration As Code for Controller intended for demos
+  hosts: localhost
+  connection: local
+  vars:
+    controller_hostname: controller.nleroux.ca
+    controller_validate_certs: false
+    # These variables are set in vars/vault.yml
+    # controller_username:    
+    # controller_password:               
+    # controller_user_default_password:
+    # ansible_password:
+  vars_files:
+    - vars/vault.yml
+    - vars/controller_orgs.yml
+    - vars/controller_teams.yml
+    - vars/controller_users.yml
+    - vars/controller_roles.yml
+    - vars/controller_inventories.yml
+    - vars/controller_hosts.yml
+    - vars/controller_credentials.yml
+  
+
+  tasks:
+    - name: Deploy Controller Organizations
+      ansible.builtin.include_role:
+        name: infra.controller_configuration.organizations
+      when: controller_organizations is defined
+
+    - name: Deploy Controller Teams
+      ansible.builtin.include_role:
+        name: infra.controller_configuration.teams
+      when: controller_teams is defined
+
+    - name: Deploy Controller Users
+      ansible.builtin.include_role:
+        name: infra.controller_configuration.users
+      when: controller_user_accounts is defined
+
+    - name: Deploy Controller Roles
+      ansible.builtin.include_role:
+        name: infra.controller_configuration.roles
+      when: controller_roles is defined
+
+    - name: Deploy Controller Inventories
+      ansible.builtin.include_role:
+        name: infra.controller_configuration.inventories
+      when: controller_inventories is defined
+
+    - name: Deploy Controller Hosts
+      ansible.builtin.include_role:
+        name: infra.controller_configuration.hosts
+      when: controller_hosts is defined
+
+    - name: Deploy Controller Credentials
+      ansible.builtin.include_role:
+        name: infra.controller_configuration.credentials
+      when: controller_credentials is defined
