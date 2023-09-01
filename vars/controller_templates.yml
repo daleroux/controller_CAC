@@ -1,0 +1,9 @@
+---
+controller_templates:
+- name: "Print Ansible Facts"
+  organization: Linux
+  job_type: run
+  inventory: linux_inventory
+  project: 	controller_CAC
+  playbook: print_ansible_facts.yml
+  credentials: ansible_user

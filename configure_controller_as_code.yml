@@ -19,8 +19,10 @@
     - vars/controller_inventories.yml
     - vars/controller_hosts.yml
     - vars/controller_credentials.yml
-  
+    - vars/controller_projects.yml
+    - vars/controller_templates.yml
 
+  
   tasks:
     - name: Deploy Controller Organizations
       ansible.builtin.include_role:
@@ -56,3 +58,14 @@
       ansible.builtin.include_role:
         name: infra.controller_configuration.credentials
       when: controller_credentials is defined
+
+    - name: Deploy Controller Projects
+      ansible.builtin.include_role:
+        name: infra.controller_configuration.projects
+      when: controller_projects is defined
+
+
+    - name: Deploy Controller Templates
+      ansible.builtin.include_role:
+        name: infra.controller_configuration.job_templates
+      when: controller_templates is defined

@@ -1,0 +1,10 @@
+---
+controller_projects:
+- name: controller_CAC
+  organization: Linux
+  scm_branch: main 
+  scm_type: git
+  scm_url: https://github.com/daleroux/controller_CAC.git
+  scm_update_on_launch: yes
+  
+
