@@ -3,7 +3,6 @@
   hosts: localhost
   connection: local
   vars:
-    controller_hostname: controller.nleroux.ca
     controller_validate_certs: false
     # These variables are set in vars/vault.yml
     # controller_username:    
@@ -11,6 +10,7 @@
     # controller_user_default_password:
     # ansible_password:
   vars_files:
+    - vars/my_site.yml    # set your controller URI here
     - vars/vault.yml
     - vars/controller_orgs.yml
     - vars/controller_teams.yml
