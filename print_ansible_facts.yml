@@ -1,6 +1,7 @@
 ---
 - name: Print Ansible Facts
   hosts: all
+  become: false
   tasks:
     - name: Gather facts
       ansible.builtin.setup:
